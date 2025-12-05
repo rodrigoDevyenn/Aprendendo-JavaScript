@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 01 - Exercício 03</title>
+</head>
+<body>
+    <h1>Lista 01 - Exercício 03</h1>
+    <h3>O litro de combustível estelar custa R$ 7,80. Escreva um programa que pergunte quantos litros a nave deseja abastecer e calcule e exiba o total a ser pago.</h3>
+    <p>Quantos litros a nave deseja abastecer:</p>
+    <input type="number" name="Litros" id="litros">
+    <input type="button" value="OK">
+    <div id = "res"></div>
+
+    <script>
+        var botao = window.document.querySelector('input[type=button]')
+        botao.addEventListener('click', calcular)
+
+        function calcular() {
+            var l = Number(window.document.querySelector('input#litros').value)
+            var res = window.document.querySelector('div#res')
+            var total = l * 7.80
+            res.innerHTML = `O valor a ser pago é de <strong>${total}</strong>`
+            
+        }
+    </script>
+</body>
+</html>
