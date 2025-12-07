@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 01 - Exercício 04</title>
+</head>
+<body>
+    <header>
+        <h1>Lista 01 - Exercício 04</h1>
+        <h3>Leia uma frase e mostre essa frase com as em caixa alta (maiúscula) como se fosse um grito de robô e depois em caixa baixa (minúsculas) como se fosse a fala de uma boneca.</h3>
+    </header>
+
+    <label for="frase">Insira uma frase:</label>
+    <input type="text" name="frase" id="frase">
+    <input type="button" value="OK">
+    <div id = 'res1'></div>
+    <div id = 'res2'></div>
+    <div id = 'res3'></div>
+    
+    <script>
+        
+        var botao = window.document.querySelector("input[type = button]")
+        botao.addEventListener('click', mostrarFrase)
+
+        function mostrarFrase() {
+            var f = String(window.document.querySelector("input#frase").value)
+            var res1 = window.document.querySelector('div#res1') 
+            var res2 = window.document.querySelector('div#res2')
+            var res3 = window.document.querySelector('div#res3')
+            res1.innerHTML = `${f}`
+            res2.innerHTML = `${f}`.toUpperCase()
+            res3.innerHTML = `${f}`.toLowerCase() 
+            
+        }
+    </script>
+</body>
+</html>

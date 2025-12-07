@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 01 - Exercício 05</title>
+</head>
+<body>
+
+    <h1>Lista 01 - Exercício 05</h1>
+    <h3>Leia do usuário o nome, a cidade e a cor favorita. Mostre uma frase como:
+        "Pedro, de Floriano, gosta da cor azul."</h3>
+    <label for="nome">Nome:</label>
+    <input type="text" name="nome" id="nome">
+
+    <label for="cidade">Cidade:</label>
+    <input type="text" name="cidade" id="cidade">
+
+    <label for="cor">Cor favorita</label>
+    <input type="text" name="cor" id="cor">
+
+    <input type="button" value="OK">
+    <div id = 'frase'></div>
+
+
+
+
+    <script>
+        var botao = window.document.querySelector('input[type = button]')
+        botao.addEventListener('click', formarFrase)
+
+        function formarFrase() {
+            var nome = String(window.document.querySelector('input#nome').value)
+            var cidade = String(window.document.querySelector('input#cidade').value)
+            var cor = String(window.document.querySelector('input#cor').value)
+            var res = window.document.querySelector('div#frase')
+            res.innerHTML = `${nome}, de ${cidade}, gosta da cor ${cor}`
+        }
+
+    </script>
+</body>
+</html>
