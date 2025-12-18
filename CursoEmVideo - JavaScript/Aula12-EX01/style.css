@@ -1,0 +1,49 @@
+body {
+    height: 100vh;
+    background: rgb(221, 192, 252);
+    font-family: "Comic Neue";
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    background: white;
+    min-width: 500px;
+    min-height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+section {
+    background: white;
+    min-width: 500px;
+    min-height: 500px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer {
+    background: white;
+    min-width: 500px;
+    min-height: 50px;
+    border-radius: 10px;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
